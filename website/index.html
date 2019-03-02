@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta HTTP-EQUIV="Expires" CONTENT="-1">
+	<meta name="keywords" content="b&b, vlaanderen, flanders, leiestreek, Lys Region, overnachten, lodging, bicycle friendly, fiets vriendelijke, bedandbreakfast, wandelen, walking, huiselijk, cosy, vrij parkeren, free parking, vlaamse ardennen, flemish ardennes, ontbijt, breakfast, fietsen, poelberg, gr paden, dentergem, belgie, belgium, landelijk, countryside, dorpskern, village centre, eenvoudig, simple, goedkoop, inexpensive">
+    <meta name="description" content="B&amp;B Bonvena. A cozy B&B in the country town Dentergem, the last stop for the Flemish Ardennes.">
+
+	<script type="text/javascript">
+	var lang = navigator.language || navigator.userLanguage;
+	if (lang.toLowerCase() == 'nl' || lang.toLowerCase().indexOf("nl-") === 0){
+		document.documentElement.lang = 'nl';
+	}
+	else{
+		document.documentElement.lang = 'en';
+	}
+	</script>
+	
+    <title>B&amp;B Bonvena</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/images/other_images/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="assets/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- vegas bg -->
+    <link href="assets/js/vegas/jquery.vegas.min.css" rel="stylesheet">
+    <!-- owl carousel css -->
+    <link href="assets/js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="assets/js/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <!-- intro animations -->
+    <link href="assets/js/wow/animate.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- lightbox -->
+    <link href="assets/js/lightbox/css/lightbox.css" rel="stylesheet">
+
+    <!-- styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <!-- place your extra custom styles in this file -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+	
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <style>
+		/* In the original theme, font size is default 1.0 em, 
+		   for 768px min-width we got 1.18 em and for 992px it was 1.44 em.
+		   Unfortunately, the 1.44em is tad too big so I'm fixing it here.
+		*/
+		@media (min-width: 768px)
+		{
+			#main-content .feature-text {
+				font-size: 1.05em;
+			}
+		}		
+		
+		@media (min-width: 992px)
+		{
+			#main-content .feature-text {
+				font-size: 1.10em;
+			}
+		}
+		
+		@media (min-width: 1050px)
+		{
+			#main-content .feature-text {
+				font-size: 1.15em;
+			}
+		}
+		
+		/* All text bold for more visibility */
+		html 
+		{
+			font-weight:bold;
+		}
+		
+		/* Above rule doesn't override the font-weight for the menu and the buttons. This fixed that. */
+		a.btn-lg 
+		{
+			font-weight:bold;
+		}
+		
+		span.menuItemSpan
+		{
+			font-weight: bold;
+		}
+		
+		/* In the original theme, a selected menuitem was set to bold. As bold is now the default, we must make it bolder off course. */
+		li.menu-item.active span.menuItemSpan
+		{
+			font-weight: bolder;
+		}
+	
+		/* Override styles of the javascript frameworks to underline and blue for unvisited
+		and purple for visited links. However, only for links for which we add our class because 
+		some links in the page are actually styled as button by the frameworks.*/
+
+		a.linkDefaultStyle:link,
+		a.linkDefaultStyle:visited,
+		a.linkDefaultStyle:hover,
+		a.linkDefaultStyle:active {
+			color : White;
+			text-decoration:underline;
+			font-weight: 900;
+			font-style: italic;
+			font-size: 103%;
+		}
+		
+		/* Center all ULs for smartphones */
+		@media (max-width: 767px) {
+		    ul
+			{	
+				display: table; 
+				margin: 0 auto; 
+			}
+		}
+		
+		/* When clicking the menu items, ensure that the title of a section, scrolls to the top of 
+		the page instead of centering the whole section in the middle-right of the window.
+		*/
+		
+	    #main-content .section-wrapper .content-wrapper
+		{
+			bottom:auto;
+		}
+		
+		/* To make 2 ul lists sit next to each other. Only for PC. */
+		@media (min-width: 768px) {
+			ul.TwoULs
+			{
+				display:inline-block;
+				width:49%;
+				vertical-align:top;
+			}
+			ul.OneUL
+			{
+				display:none;
+			}
+		}
+		@media (max-width: 767px) {
+			ul.TwoULs
+			{
+				display:none;
+			}
+			ul.OneUL
+			{
+				display: table; 
+				margin: 0 auto; 
+			}
+		}
+		
+		/* Center captions of the different carrousels (rooms, ...) underneath the pictures and float the pictures 
+		   to the right in case of a PC or center them in case of a smartphone
+		*/
+		.CarrouselText
+		{
+			text-align:center
+		}
+				
+		@media (min-width: 768px) {
+			.feature-col
+			{
+				float:left
+			}
+		}
+		@media (max-width: 767px) {
+			.feature-col
+			{
+				display: table; 
+		        margin: 0 auto;
+			}
+		}
+
+		/* Languages */
+		/* Hide all dutch spans by default */
+		span[lang="nl"]
+		{
+			display:none
+		}
+		
+		/* Show the dutch spans and hide the english ones if the root lang is dutch */
+		:lang(nl) span:lang(nl) 
+		{
+			/* Note : don't use initial. In IE it doesn't work although it would be more correct to use it.*/
+			display:inline;
+		}
+		
+		:lang(nl) span:lang(en) 
+		{
+			display:none;
+		}	
+		
+		/* Use same system for button languages i.e. default is english regardless of the root language */
+		#btn-lang-en
+		{
+			font-weight:bolder;
+			font-family:"open_sansbold",sans-serif;
+		}
+		
+		#btn-lang-en:lang(nl) 
+		{
+			font-weight:inherit;
+			font-family:inherit;
+		}
+		
+		#btn-lang-nl:lang(nl) 
+		{
+			font-weight:bolder;
+			font-family:"open_sansbold",sans-serif;
+		}		
+		
+		.btn-lang 
+		{
+			cursor:pointer
+		}
+
+		.div-lang 
+		{
+			display:block;
+			cursor:default;
+		}	
+		
+		/* Bigger menu and logo */
+		
+		@media (min-width: 768px) 
+		{
+			#left-sidebar 
+			{
+				min-width: 260px;
+			}
+			#left-sidebar #main-menu
+			{
+				font-size : 1.10em
+			}			
+			.btn-lang 
+			{
+				font-size : 1.05em
+			}
+		}
+	
+		@media (min-width: 992px)
+		{
+			#left-sidebar 
+			{
+				min-width: 285px;
+			}
+			#left-sidebar #main-menu
+			{
+				font-size : 1.15em
+			}			
+			.btn-lang 
+			{
+				font-size : 1.10em
+			}
+		}
+		
+		@media (min-width: 1050px)
+		{
+			#left-sidebar 
+			{
+				min-width: 310px;
+			}
+			#left-sidebar #main-menu
+			{
+				font-size : 1.25em
+			}			
+			.btn-lang 
+			{
+				font-size : 1.20em
+			}
+		}
+			
+		#left-sidebar .logo img
+		{
+			max-width: 95%;
+		}
+		
+		#left-sidebar div.logo
+		{
+			padding-bottom:0px;
+		}
+		
+		@media (min-width: 768px) 
+		{
+			/* Ensures that the legenda has room to appear left of the calendar. */
+			div.divContactEnReservatie
+			{
+				width:100%
+			}
+		}
+		
+		/* Styling table with restaurants */
+		table.tableRestaurants
+		{
+			margin-left: 0.6em;
+			margin-top: 0.3em;
+		}
+		
+		table.tableRestaurants td
+		{
+			padding-right: 1em;
+		}
+		
+		td.FoodRestaurantsHeaderRow
+		{
+			padding-bottom:0.5em;
+		}
+		
+		/* No border for the googlemap and widht is fixed 350px */
+		iframe.googleMapIframe
+		{
+			border:0;
+			width:100%;
+			height:350px;
+		}
+		
+		/* Float the google map a bit to right and down for big media and set its width to 50%
+		to give the gallery some room. Center it for small media.*/
+		@media (min-width: 767px) 
+		{
+			span.googleMap
+			{
+				float:left;
+				margin-left:1em;
+				width:50%;
+				max-width:350px;
+				height:350px;
+				padding:0px;
+			}
+		}		
+
+		@media (max-width: 767px)
+		{
+			span.googleMap
+			{
+				display: table; 
+		        margin: 0 auto;
+				width:350px;
+				height:350px;
+				padding:0px;
+			}
+		}
+		
+		/* Hide the read more buttons for media with small screen estate. They're useless there */
+		@media (max-width: 767px)
+		{
+			.ReadMoreButtons
+			{
+				display:none;
+			}
+		}
+		
+		/* Styling calendar bedandbreakfast */
+		iframe.bedandbreakfastCalendarIframe
+		{
+			width:500px;
+			height:780px;
+		}
+	</style>
+	
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	
+	<script>
+		//IE throws a JS error if you click on a language link before the changeLanguage function
+		//exists
+		var waitForExistenceChangeLanguageCounter = 0;
+      	function changeLanguageDelayedIfNecessary (lang){
+			if (typeof window.changeLanguage === "function") { 
+				changeLanguage(lang);
+			}
+			else{
+				waitForExistenceChangeLanguageCounter = 
+					waitForExistenceChangeLanguageCounter + 1;
+				if (waitForExistenceChangeLanguageCounter < 50){
+					setTimeout(function(){ changeLanguageDelayed(lang); }, 100);
+				}
+			}
+		}
+	</script>
+  </head>
+
+  <body data-default-background-img="assets/images/other_images_bonvena/backgrounds/5.jpg" data-overlay="true" data-overlay-opacity="0.35">
+
+    <!-- Outer Container -->
+    <div id="outer-container">
+
+      <!-- Left Sidebar -->
+      <section id="left-sidebar">
+        
+        <div class="logo">
+          <a href="#welkom" class="link-scroll"><img src="assets/images/other_images_bonvena/logo.png" alt="B&amp;B Bonvena"></a>
+		  <div><span lang="nl">(Esperanto voor welkom)</span>
+		       <span lang="en">(Esperanto for welcome)</span>
+		  </div>
+		  <div class="div-lang">
+			<a id="btn-lang-nl" class="btn-lang" onclick="changeLanguageDelayedIfNecessary('nl')">nl&nbsp;</a>
+			|
+			<a id="btn-lang-en" class="btn-lang" onclick="changeLanguageDelayedIfNecessary('en')">&nbsp;en</a>
+		  </div>
+		</div><!-- .logo -->
+
+        <!-- Menu Icon for smaller viewports -->
+        <div id="mobile-menu-icon" class="visible-xs" onClick="toggle_main_menu();"><span class="glyphicon glyphicon-th"></span></div>
+
+        <ul id="main-menu">
+          <li id="menu-item-welkom" class="menu-item scroll"><a href="#welkom"><span lang="nl" class="menuItemSpan">Welkom</span><span lang="en" class="menuItemSpan">Welcome</span></a></li>
+          <li id="menu-item-voorzieningen" class="menu-item scroll"><a href="#voorzieningen"><span lang="nl" class="menuItemSpan">Voorzieningen</span><span lang="en" class="menuItemSpan">Services</span></a></li>
+          <li id="menu-item-omgeving" class="menu-item scroll"><a href="#omgeving"><span lang="nl" class="menuItemSpan">Omgeving</span><span lang="en" class="menuItemSpan">Surroundings</span></a></li>
+          <li id="menu-item-uitEten" class="menu-item scroll"><a href="#uitEten"><span lang="nl" class="menuItemSpan">Uit Eten</span><span lang="en" class="menuItemSpan">Food</span></a></li>
+		  <li id="menu-item-kamersEnPrijzen" class="menu-item scroll"><a href="#kamersEnPrijzen"><span lang="nl" class="menuItemSpan">Kamers &amp; Prijzen</span><span lang="en" class="menuItemSpan">Rooms &amp; Prices</span></a></li>
+          <li id="menu-item-contactEnReservatie" class="menu-item scroll contactEnReservatie"><a href="#contactEnReservatie" class="contactEnReservatie"><span lang="nl" class="menuItemSpan">Contact &amp; Reservatie</span><span lang="en" class="menuItemSpan">Contact &amp; Reservation</span></a></li>
+        </ul><!-- #main-menu -->
+
+      </section><!-- #left-sidebar -->
+      <!-- end: Left Sidebar -->
+
+      <section id="main-content" class="clearfix">
+        
+        <article id="welkom" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/1.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+
+                <section class="feature-text">
+				  <h3><span lang="nl">Welkom</span>
+				      <span lang="en">Welcome</span></h3>
+				  
+                  <p><span lang="nl">Een huiselijke B&amp;B in het plattelandsdorp Dentergem, <br/>Officieel vergund door Departement Int. Vlaanderen
+							         <br/>Officieel label "Fietsvriendelijk Logies" (ToerismeVlaanderen)
+				     </span>
+					 <span lang="en">A cozy B&amp;B in Dentergem, a village in the countryside,
+					                 <br/>Officially licensed by the Department Int. Flanders. 
+					                 <br/>Official label "Bicycle-Friendly Lodgings" (TouristFlanders) 
+					 </span></p>
+				  <ul>
+					<li><span lang="nl">Twee kamers (max. 3 &amp; 4 personen), boxspringbedden, inloopdouches, aparte toiletten</span>
+					    <span lang="en">Two rooms (max. 3 &amp; 4 people), box-spring beds, walk-in showers, separate toilets</span></li>
+					<li><span lang="nl">Afgesloten fietsstelplaats, kledijdroogruimte en fietsherstelatelier</span>
+					    <span lang="en">Lockable bicycle-depot, clothes’ drying room and bicycle-repair workshop</span></li>
+					<li><span lang="nl">Ruime keuken- &amp; rustruimte, wifi, huisbibliotheek, overdekt terras in zuidgerichte tuin</span>
+					    <span lang="en">Spacious kitchen &amp; resting space, wifi, house library, covered terrace in south-facing garden</span>
+						<br/></li>
+					<li><span lang="nl">Dentergem is gelegen in de driehoek van de provinciestadjes
+					    Tielt, Deinze en Waregem, (elk op &#177; 15 min), Oudenaarde (&#177;20 min),
+						de Vlaamse Ardennen (&#177;10 min) en de kunststeden:
+						Gent, Brugge, Kortrijk (elk op &#177; 30 min).</span>
+						<span lang="en">Dentergem is located in the triangle of the provincial towns
+					    Tielt, Deinze and Waregem, (each &#177; 15 min), Oudenaarde (&#177;20 min),
+						the Flemish Ardennes (&#177;10 min) and the art cities:
+						Ghent, Bruges, Kortrijk (each &#177; 30 min).</span>
+					</li>
+				  </ul>
+				  <!-- feature columns -->
+				  <section class="feature-columns row clearfix sectionWithGoogleMap">
+					  <span class="googleMap">
+						<iframe class="googleMapIframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d321325.8367520303!2d3.2832096!3d51.0095329!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e5087dcc1720f7d!2sB+%26+B+BONVENA!5e0!3m2!1sen!2s!4v1445124162115&ll=51.084804, 3.371375" frameborder="0" allowfullscreen></iframe>
+					  </span>
+				  
+					  <div>
+						  <article class="feature-col col-md-4">
+							<a href="" onclick="populate_and_open_modal(event, 'modal-content-3', '', 'full-size');" class="thumbnail linked">
+							  <div class="image-container">
+								<img data-img-src="assets/images/other_images_bonvena/Environment/1_thumb.jpg" class="lazy item-thumbnail" alt="Gallery Environment">
+							  </div>
+							  <div class="caption">
+								<h5 class="CarrouselText"><span lang="nl">Gallerij</span><span lang="en">Gallery</span></h5>
+							  </div><!-- .caption -->
+							</a><!-- .thumbnail -->
+
+							<div class="content-to-populate-in-modal" id="modal-content-3">
+							  <!-- alt image slider inside popup -->
+							  <div id="unique-id-for-alt-image-slider-Environment" class="owl-carousel popup-alt-image-gallery">
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/1.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/1_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/2.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/2_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/3.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/3_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/4.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/4_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/5.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/5_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/6.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/6_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/7.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/7_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/8.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/8_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/9.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/9_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/10.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/10_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/11.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/11_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/12.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/12_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/13.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/13_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/14.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/14_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/15.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/15_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/16.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/16_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/17.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/17_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/18.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/18_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/19.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/19_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/20.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/20_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/21.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/21_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/22.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/22_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/23.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/23_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/24.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/24_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/25.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/25_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/26.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/26_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/27.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/27_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/28.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/28_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/29.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/29_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/30.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/30_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/31.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/31_thumb.jpg"></a></div>
+								<div class="item"><a href="assets/images/other_images_bonvena/Environment/32.jpg" data-lightbox="popup-alt-gallery3"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Environment/32_thumb.jpg"></a></div>
+							  </div>
+							</div><!-- #modal-content-8 -->
+						  </article>
+						  
+						  <a href="#voorzieningen" class="ReadMoreButtons link-scroll btn btn-outline-inverse btn-lg">
+							<span lang="nl">Lees Meer</span>
+							<span lang="en">Read More</span>
+						 </a>
+					  </div>
+					</section><!-- end: .feature-columns -->
+				</section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+        <article id="voorzieningen" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/2.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+                <section class="feature-text">
+				  <h3><span lang="nl">Voorzieningen</span><span lang="en">Services</span></h3>
+                  <ul>
+					<li><span lang="nl">Ruime keuken- &amp; zitruimte</span>
+					    <span lang="en">Spacious kitchen &amp; lounge</span></li>
+					<li><span lang="nl">Huisbibliotheek</span>
+					    <span lang="en">House library</span></li>
+					<li><span lang="nl">Overal goede internet (wifi) ontvangst</span>
+					    <span lang="en">Everywhere good internet (wifi) reception</span></li>
+					<li><span lang="nl">Ruime kamers</span>
+					    <span lang="en">Spacious rooms</span></li>
+					<li><span lang="nl">Kamers met eigen badkamer met inloopdouche</span>
+					    <span lang="en">Rooms with a private bathroom and walk-in shower</span></li>
+					<li><span lang="nl">Apart toilet per kamer</span>
+					    <span lang="en">Separate toilet per room</span></li>
+					<li><span lang="nl">Afsluitbare fietsstelplaats</span>
+					    <span lang="en">Lockable bicycle-depot</span></li>
+					<li><span lang="nl">2 fietsen gratis beschikbaar</span>
+					    <span lang="en">2 bicycles available free of charge</span></li>
+					<li><span lang="nl">Sneldroogruimte voor fietskleding</span>
+					    <span lang="en">Fast drying room for bicycle clothing</span></li>
+					<li><span lang="nl">Fietsherstelatelier met het nodige materieel</span>
+					    <span lang="en">Bicycle-repair workshop with the necessary equipment</span></li>
+					<li><span lang="nl">Overdekt terras in zuidgerichte binnentuin</span>
+					    <span lang="en">Covered terrace in south-facing courtyard garden</span></li>
+					<li><span lang="nl">Rookvrije kamers en ruimten</span>
+					     <span lang="en">Non-smoking rooms and areas</span></li>
+					<li><span lang="nl">Rookmogelijkheid op het terras</span>
+					    <span lang="en">Smoking allowed on the terrace</span></li>
+					<li><span lang="nl">In het centrum van het dorp: winkels, cafes, eetmogelijkheden, fietsherstellers (2)</span>
+					    <span lang="en">In the center of the village: shops, cafes, dining options, bicycle repair shops (2)</span></li>
+				  </ul>
+				  <!-- feature columns -->
+					<section class="feature-columns row clearfix">
+					  <article class="feature-col col-md-4">
+						<a href="" onclick="populate_and_open_modal(event, 'modal-content-4', '', null);" class="thumbnail linked">
+						  <div class="image-container">
+							<img data-img-src="assets/images/other_images_bonvena/Garden/1_thumb.jpg" class="lazy item-thumbnail" alt="Garden">
+						  </div>
+						  <div class="caption">
+							<h5 class="CarrouselText"><span lang="nl">Tuin</span><span lang="en">Garden</span></h5>
+						  </div><!-- .caption -->
+						</a><!-- .thumbnail -->
+
+						<div class="content-to-populate-in-modal" id="modal-content-4">
+						  <h1><span lang="nl">Tuin</span><span lang="en">Garden</span></h1>
+						  
+						  <!-- alt image slider inside popup -->
+						  <div id="unique-id-for-alt-image-slider-Garden" class="owl-carousel popup-alt-image-gallery">
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/1.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/1_thumb.jpg"></a></div>
+						    <div class="item"><a href="assets/images/other_images_bonvena/Garden/2.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/2_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/3.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/3_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/4.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/4_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/5.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/5_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/6.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/6_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/7.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/7_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/8.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/8_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/9.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/9_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/10.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/10_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/11.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/11_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/12.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/12_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Garden/13.jpg" data-lightbox="popup-alt-gallery4"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Garden/13_thumb.jpg"></a></div>
+						  </div>
+						</div><!-- #modal-content-8 -->
+					  </article>
+					  
+					  <a href="#omgeving" class="ReadMoreButtons link-scroll btn btn-outline-inverse btn-lg">
+						<span lang="nl">Lees Meer</span>
+						<span lang="en">Read More</span>
+					 </a>
+				  </section><!-- end: .feature-columns -->
+				</section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+		<article id="omgeving" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/3.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+                <section class="feature-text">
+				  <h3><span lang="nl">Omgeving</span><span lang="en">Surroundings</span></h3>
+                  <ul>
+					<li><span lang="nl">Leiestreek: <a class="linkDefaultStyle"  href="http://www.toerisme-leiestreek.be/nl">De Leie</a>, fietsen &amp; wandelen langs trage wegen</span>
+					    <span lang="en">Lys Region: <a class="linkDefaultStyle"  href="http://www.toerisme-leiestreek.be/en">The Lys</a>, biking &amp; hiking along slow roads</span></li>
+					<li><span lang="nl">Dentergem: <a class="linkDefaultStyle"  href="http://www.kerstenburg.be">Manège Kerstenburg</a></span>
+					    <span lang="en">Dentergem: <a class="linkDefaultStyle"  href="http://www.kerstenburg.be">Manege Kerstenburg (dutch)</a></span></li>
+					<li><span lang="nl">Markegem: <a class="linkDefaultStyle"  href="http://dp2.apache07.hostbasket.com/wolfcarius/index.php/nl/">Fruitbedrijf Wolfcarius</a></span>
+					    <span lang="en">Markegem: <a class="linkDefaultStyle"  href="http://dp2.apache07.hostbasket.com/wolfcarius/index.php/en/">Fruitcompany Wolfcarius</a></span></li>
+					<li><span lang="nl">Oeselgem: <a class="linkDefaultStyle"  href="http://www.purfruit.be/">Zelfpluktuin 'Pur Fruit'</a></span>
+					    <span lang="en">Oeselgem: <a class="linkDefaultStyle"  href="http://www.purfruit.be/">Selfservice fruit garden 'Pur Fruit' (dutch)</a></span></li>
+					<li><span lang="nl">Wakken: <a class="linkDefaultStyle"  href="http://www.brijdebie.be/dut">Huisbrouwerij 'De Bie'</a>, 
+						         <a class="linkDefaultStyle"  href="http://www.dentergem.be/nl/Gemeente/pages/vrije-tijd_toerisme_bezienswaardigheden_baliekouter">Provinciaal domein 'De Baliekouter'</a>
+					    </span>
+						<span lang="en">Wakken: <a class="linkDefaultStyle"  href="http://www.brijdebie.be/eng">Brewery 'De Bie'</a>, 
+						         <a class="linkDefaultStyle"  href="http://www.dentergem.be/nl/Gemeente/pages/vrije-tijd_toerisme_bezienswaardigheden_baliekouter">Provincial domain 'De Balie Coulter' (dutch)</a>
+						</span></li>
+					<li><span lang="nl">Machelen: <a class="linkDefaultStyle"  href="http://www.rogerraveelmuseum.be/website-default/1-www.html">Kunstschilder Raveelmuseum</a></span>
+					    <span lang="en">Machelen: <a class="linkDefaultStyle"  href="http://www.rogerraveelmuseum.be/website-default/1-www.html">Painter Raveelmuseum (dutch)</a></span></li>
+					<li><span lang="nl">Gottem: <a class="linkDefaultStyle"  href="http://www.sintcanarus.be/nl">Huisbrouwerij 'Sint-Canarus'</a></span>
+					    <span lang="en">Gottem: <a class="linkDefaultStyle"  href="http://www.sintcanarus.be/en">Brewery 'Sint-Canarus</a></span></li>
+					<li><span lang="nl">Tielts Plateau: 
+					          <a class="linkDefaultStyle" href="http://www.poelbergsite.be/dut">Poelberg</a> met molen - de 'point-de-vue' van de streek, 
+					          <a class="linkDefaultStyle" href="http://www.westtoer.be/nl/dagtrips-voor-groepen/themas/molenlandroute">Molenlandroute</a>, 
+					          <a class="linkDefaultStyle" href="http://www.vlaanderen-fietsland.be/fietsroute.php?id=124">Mandeldalroute</a>
+						</span>
+					    
+						<span lang="en">Tielts platform: <a class="linkDefaultStyle"  href="http://www.poelbergsite.be/eng">Hill Poelberg</a> with mill - the 'point de vue' of the region, 
+						      <a class="linkDefaultStyle" href="http://www.westtoer.be/nl/dagtrips-voor-groepen/themas/molenlandroute">Molenland route (dutch)</a>, 
+					          <a class="linkDefaultStyle" href="http://www.vlaanderen-fietsland.be/fietsroute.php?id=124">Mandeldal route (dutch)</a>
+					     </span></li>
+					
+					<li><span lang="nl">Grammene:  <a class="linkDefaultStyle"  href="http://www.gezinsbondgrammene.be/www/rommelmarkt-2009/">rommelmarkt gezinsbond Grammene</a></span>
+					    <span lang="en">Grammene:  <a class="linkDefaultStyle"  href="http://www.gezinsbondgrammene.be/www/rommelmarkt-2009/">jumble sale (dutch)</a></span></li>
+					<li><span lang="nl">Kruising 
+								<a class="linkDefaultStyle"  href="http://www.groteroutepaden.be/nl">GR 128 en GR 129</a> op &plusmn; 3 km</span>
+					    <span lang="en">Intersection 
+						        <a class="linkDefaultStyle"  href="http://www.groteroutepaden.be/en">GR 128 and GR 129</a> at &plusmn; 3 km</span>
+					</li>
+					<li><span lang="nl">
+							    <a class="linkDefaultStyle"  href="http://www.groteroutepaden.be/nl">GR 128</a> 
+								op &plusmn; 1,5 km</span>
+						<span lang="en">
+						        <a class="linkDefaultStyle"  href="http://www.groteroutepaden.be/en">GR 128</a> 
+								at &plusmn; 1,5 km</span>
+					</li>
+					<li><span lang="nl">
+							   <a class="linkDefaultStyle"  href="http://www.fietsnet.be/routeplanner/default.aspx">Fietsrouteknooppunt</a> 
+						       nr. 74 van de Leiestreek
+						</span>
+					    <span lang="en">
+						       <a class="linkDefaultStyle"  href="http://www.fietsnet.be/routeplanner/default.aspx">Bicycle trail junction (dutch)</a>
+						       nr. 74 of the Lys region
+					    </span>
+					</li>
+				  </ul>
+					
+					<p class="ReadMoreButtons">
+						<a href="#uitEten" class="link-scroll btn btn-outline-inverse btn-lg">
+							<span lang="nl">Lees Meer</span>
+							<span lang="en">Read More</span>
+						</a>
+				    </p>
+				</section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+		<article id="uitEten" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/6.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+                <section class="feature-text">
+				  <h3><span lang="nl">Uit Eten</span><span lang="en">Food</span></h3>
+                  <ul>
+					<li><span lang="nl">Cafés, frituren en snack op wandelafstand</span>
+					    <span lang="en">Pubs, chip shops and fast food within walking distance</span></li>
+					<li><span lang="nl en">Restaurants:</span>
+						<table class="tableRestaurants">
+						    <tr>								
+							    <td class="FoodRestaurantsHeaderRow"><span lang="nl">Wie&nbsp;?</span><span lang="en">Who&nbsp;?</span>
+								</td>
+								<td class="FoodRestaurantsHeaderRow"><span lang="nl">Waar&nbsp;?</span><span lang="en">Where&nbsp;?</span>
+								</td>								
+								<td class="FoodRestaurantsHeaderRow"><span lang="nl">Per&nbsp;auto</span><span lang="en">Driving&nbsp;Distance</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.Tapuyt.be">Tapuyt</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.Tapuyt.be">Tapuyt (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Gottem</span>
+								</td>								
+								<td><span lang="nl en">2 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.denbek.be">Den bek</a></span>
+								    <span lang="en"><a class="linkDefaultStyle" href="http://www.denbek.be">Den bek (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Wontergem</span>
+								</td>								
+								<td><span lang="nl en">6 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.Resto-Detrog.be">Resto De Trog</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.Resto-Detrog.be">Resto De Trog (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Wakken</span>
+								</td>								
+								<td><span lang="nl en">6 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.bourgondischkruis.be">Bourgondisch Kruis</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.bourgondischkruis.be">Bourgondisch Kruis (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Wakken</span>
+								</td>								
+								<td><span lang="nl en">7 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.garnituurke.be">'t Garnituurke</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.garnituurke.be">'t Garnituurke (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Wakken</span>
+								</td>								
+								<td><span lang="nl en">7 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.dewaaiberg.com/">De Waaiberg</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.dewaaiberg.com/">De Waaiberg (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Aarsele</span>
+								</td>								
+								<td><span lang="nl en">8 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.restaurantdekarper.be">Restaurant De Karper</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.restaurantdekarper.be">Restaurant De Karper (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Machelen</span>
+								</td>								
+								<td><span lang="nl en">10 min</span>
+								</td>
+							</tr>
+							<tr>
+								<td><span lang="nl"><a class="linkDefaultStyle" href="http://www.Denaelde.be">De Naelde</a></span>
+									<span lang="en"><a class="linkDefaultStyle" href="http://www.Denaelde.be">De Naelde (dutch)</a></span>
+								</td>
+								<td><span lang="nl en">Kanegem</span>
+								</td>								
+								<td><span lang="nl en">12 min</span>
+								</td>
+							</tr>
+						</table>
+					</li>
+				  </ul>
+				  <p class="ReadMoreButtons">
+				  	  <a href="#kamersEnPrijzen" class="link-scroll btn btn-outline-inverse btn-lg">
+						<span lang="nl">Lees Meer</span>
+						<span lang="en">Read More</span>
+					  </a>
+				  </p>
+				</section>
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+		
+        <article id="kamersEnPrijzen" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/4.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right">
+                
+				<section class="feature-text">
+					<h3><span lang="nl">Kamers &amp; Prijzen</span>
+					    <span lang="en">Rooms &amp; Prices</span></h3>
+					
+					<p><span lang="nl">Eén persoon per kamer: 60 euro per nacht inclusief ontbijt.
+					   <br/>Vanaf 2 personen: 40 euro/persoon per nacht inclusief ontbijt.
+					   <br/>Huisdieren niet toegestaan. Elke kamer is rookvrij en heeft:</span>
+					   <span lang="en">One person per room: 60 euro per night, including breakfast.
+                       <br/>2 or more persons: 40 euro/person per night including breakfast.
+                       <br/>No pets allowed. Every room is non-smoking and has:
+					   </span>
+					</p>
+				   <ul class="TwoULs">
+						<li><span lang="nl">een eigen verwarmingsniveau</span>
+						    <span lang="en">an independent heating level</span>
+						</li>
+						<li><span lang="nl">brandverlichting in de gangen tot buiten</span>
+						    <span lang="en">emergency lighting in the hallway until outside</span>
+						</li>
+						<li><span lang="nl">toegang tot een tweede trap (noodtrap)</span>
+						    <span lang="en">access to a second staircase (emergency staircase)</span>
+						</li>
+					</ul>
+					<ul class="TwoULs">
+					    <li><span lang="nl en">wifi</span>
+						</li>
+						<li><span lang="nl">een eigen toilet en inloopdouche</span>
+						    <span lang="en">a private toilet and a walk-in shower</span>
+						</li>
+						<li><span lang="nl">nacht- &amp; leeslicht per bed</span>
+						    <span lang="en">a reading light and nightlight for each bed</span>
+						</li>
+						<li><span lang="nl">een bureeltje</span>
+						    <span lang="en">a small desk</span>
+						</li>
+				    </ul>
+					<ul class="OneUL">
+						<li><span lang="nl">een eigen verwarmingsniveau</span>
+						    <span lang="en">independent heating level</span>
+						</li>
+						<li><span lang="nl">brandverlichting in de gangen tot buiten</span>
+						    <span lang="en">emergency lighting in the hallways until outside</span>
+						</li>
+						<li><span lang="nl">toegang tot een tweede trap (noodtrap)</span>
+						    <span lang="en">access to second stairs (emergency stairs)</span>
+						</li>
+					    <li><span lang="nl en">wifi</span>
+						</li>
+						<li><span lang="nl">een eigen toilet en inloopdouche</span>
+						    <span lang="en">a private toilet and a walk-in shower</span>
+						</li>
+						<li><span lang="nl">nacht- & leeslicht per bed</span>
+						    <span lang="en">reading light and nightlight for each bed</span>
+						</li>
+						<li><span lang="nl">een bureeltje</span>
+						    <span lang="en">a small desk</span>
+						</li>
+					</ul>
+				   
+					<!-- feature columns -->
+					<section class="feature-columns row clearfix">
+					
+					  <article class="feature-col col-md-4">
+						<a href="" onclick="populate_and_open_modal(event, 'modal-content-2', '', null);" class="thumbnail linked">
+						  <div class="image-container">
+							<img data-img-src="assets/images/other_images_bonvena/Rooms/AmosOz/2_thumb.jpg" class="lazy item-thumbnail" alt="Amos Oz">
+						  </div>
+						  <div class="caption">
+							<h5 class="CarrouselText"><span lang="nl">Kamer</span><span lang="en">Room</span> 'Amos Oz'<br/>(3P)</h5>
+						  </div><!-- .caption -->
+						</a><!-- .thumbnail -->
+
+						<div class="content-to-populate-in-modal" id="modal-content-2">
+						  <h1>'Amos&nbsp;Oz'</h1>
+						  
+						  <!-- alt image slider inside popup -->
+						  <div id="unique-id-for-alt-image-slider-AmosOz" class="owl-carousel popup-alt-image-gallery">
+							<div class="item"><a href="assets/images/other_images_bonvena/Rooms/AmosOz/1.jpg" data-lightbox="popup-alt-gallery2"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/AmosOz/1_thumb.jpg"></a></div>
+						    <div class="item"><a href="assets/images/other_images_bonvena/Rooms/AmosOz/2.jpg" data-lightbox="popup-alt-gallery2"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/AmosOz/2_thumb.jpg"></a></div>
+							<div class="item"><a href="assets/images/other_images_bonvena/Rooms/AmosOz/3.jpg" data-lightbox="popup-alt-gallery2"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/AmosOz/3_thumb.jpg"></a></div>
+						    <div class="item"><a href="assets/images/other_images_bonvena/Rooms/AmosOz/4.jpg" data-lightbox="popup-alt-gallery2"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/AmosOz/4_thumb.jpg"></a></div>
+						  </div>
+						</div><!-- #modal-content-8 -->
+					  </article>
+					  
+					  <article class="feature-col col-md-4">
+						<a href="" onclick="populate_and_open_modal(event, 'modal-content-1', '', null);" class="thumbnail linked">
+						  <div class="image-container">
+							<img data-img-src="assets/images/other_images_bonvena/Rooms/HenningMankell/2_thumb.jpg" class="lazy item-thumbnail" alt="Henning Mankell">
+						  </div>
+						  <div class="caption">
+							<h5 class="CarrouselText"><span lang="nl">Kamer</span><span lang="en">Room</span> 'Henning Mankell'<br/>(4P)</h5>
+						  </div><!-- .caption -->
+						</a><!-- .thumbnail -->
+
+						<div class="content-to-populate-in-modal" id="modal-content-1">
+						  <h1>'Henning&nbsp;Mankell'</h1>
+						  <!-- alt image slider inside popup -->
+						  <div id="unique-id-for-alt-image-slider-HenningMankell" class="owl-carousel popup-alt-image-gallery">
+							<div class="item"><a href="assets/images/other_images_bonvena/Rooms/HenningMankell/1.jpg" data-lightbox="popup-alt-gallery1"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/HenningMankell/1_thumb.jpg"></a></div>
+						 	<div class="item"><a href="assets/images/other_images_bonvena/Rooms/HenningMankell/2.jpg" data-lightbox="popup-alt-gallery1"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/HenningMankell/2_thumb.jpg"></a></div>
+						 	<div class="item"><a href="assets/images/other_images_bonvena/Rooms/HenningMankell/3.jpg" data-lightbox="popup-alt-gallery1"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/HenningMankell/3_thumb.jpg"></a></div>
+						 	<div class="item"><a href="assets/images/other_images_bonvena/Rooms/HenningMankell/4.jpg" data-lightbox="popup-alt-gallery1"><img class="lazyOwl" data-src="assets/images/other_images_bonvena/Rooms/HenningMankell/4_thumb.jpg"></a></div>
+						 </div>
+						</div><!-- #modal-content-8 -->
+					  </article>
+
+				  	  <a href="#contactEnReservatie" class="ReadMoreButtons link-scroll btn btn-outline-inverse btn-lg">
+						<span lang="nl">Lees Meer</span>
+						<span lang="en">Read More</span>
+					  </a>
+					</section><!-- end: .feature-columns -->
+
+			  </section>
+              <!-- End: Section content to edit -->
+
+            </div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->  
+
+        <article id="contactEnReservatie" class="section-wrapper clearfix" data-custom-background-img="assets/images/other_images_bonvena/backgrounds/5.jpg">
+          <div class="content-wrapper clearfix wow fadeInDown" data-wow-delay="0.3s">
+            <div class="col-sm-10 col-md-9 pull-right divContactEnReservatie">
+			    <section class="feature-text">
+					<h3>
+					    <span lang="nl">Contact &amp; Reservatie</span>
+					    <span lang="en">Contact &amp; Reservation</span></h3>
+
+						<p><span lang="nl">Adres</span><span lang="en">Address</span>: 
+						         Dreve 18, 8720 Dentergem, <span lang="nl">België</span><span lang="en">Belgium</span>
+							<br/>GPS: <span lang="nl">N50,96336 O3,417416.</span>
+							          <span lang="en">N50.96336 E3.417416.</span>
+						    <br/>Email: <a class="linkDefaultStyle" href="mailto:geertvanmeenen@hotmail.com">geertvanmeenen@hotmail.com</a>
+							<br/><span lang="nl">GSM</span><span lang="en">Mobile</span>: +32 476 27 74 96
+							<br/><span lang="nl">Check-in: vanaf 17:00</span>
+							<span lang="en">Check-in: from 17:00 (5 p.m.)</span>
+							<br/><span lang="nl">Check-out: tot 10:00</span>
+							<span lang="en">Check-out: until 10:00 (10 a.m.)</span>
+							<br/><span lang="nl">Betaling: cash bij aankomst (2 geldautomaten op wandelafstand)<br/>bancontact app bij aankomst (<a href="https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=nl">google play store</a>/<a href="https://itunes.apple.com/be/app/bancontact-mobile/id858371800?l=nl">apple app store</a>)</span>
+							<span lang="en">Payment: cash upon arrival (2 cash machines within walking distance)<br/>bancontact app upon arrival (<a href="https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=en">google play store</a>/<a href="https://itunes.apple.com/be/app/bancontact-mobile/id858371800?l=en">apple app store</a>)</span>
+						</p>
+						<p>
+							<span lang="en">Below, you can check the availability and send us a reservation.</span>
+							<span lang="nl">U kan beschikbaarheid hieronder controleren en een reservatie doorsturen.</span>
+							<br/> 
+							<span lang="nl"><iframe class="bedandbreakfastCalendarIframe" src="https://www.bedandbreakfast.eu/ibook/1238021/nl/smoothness" frameborder="0" allowtransparency="true"></iframe></span>
+						    <span lang="en"><iframe class="bedandbreakfastCalendarIframe" src="https://www.bedandbreakfast.eu/ibook/1238021/en/smoothness" frameborder="0" allowtransparency="true"></iframe></span>
+						</p>
+					</section>
+			</div><!-- .col-sm-10 -->
+          </div><!-- .content-wrapper -->
+        </article><!-- .section-wrapper -->
+
+      </section><!-- #main-content -->
+
+      <!-- Footer -->
+      <section id="footer">
+
+        <!-- Go to Top -->
+        <div id="go-to-top" onclick="scroll_to_top();"><span class="icon glyphicon glyphicon-chevron-up"></span></div>
+
+        <!-- copyright text -->
+        <div class="footer-text-line">&copy; 2014 Twilli | Air</div>
+      </section>
+      <!-- end: Footer -->      
+
+    </div><!-- #outer-container -->
+    <!-- end: Outer Container -->
+
+    <!-- Modal -->
+    <!-- DO NOT MOVE, EDIT OR REMOVE - this is needed in order for popup content to be populated in it -->
+    <div class="modal fade" id="common-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="modal-body clearfix">
+          </div><!-- .modal-body -->
+        </div><!-- .modal-content -->
+      </div><!-- .modal-dialog -->
+    </div><!-- .modal -->    
+
+    <!-- Javascripts
+    ================================================== -->
+
+    <!-- Jquery and Bootstrap JS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Easing - for transitions and effects -->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+
+    <!-- background image strech script -->
+    <script src="assets/js/vegas/jquery.vegas.min.js"></script>
+
+    <!-- detect mobile browsers -->
+    <script src="assets/js/detectmobilebrowser.js"></script>
+
+    <!-- detect scrolling -->
+    <script src="assets/js/jquery.scrollstop.min.js"></script>
+
+    <!-- owl carousel js -->
+    <script src="assets/js/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- lightbox js -->
+    <script src="assets/js/lightbox/js/lightbox.min.js"></script>
+
+    <!-- intro animations -->
+    <script src="assets/js/wow/wow.min.js"></script>
+
+    <!-- responsive videos -->
+    <script src="assets/js/jquery.fitvids.js"></script>
+
+    <!-- Custom functions for this theme -->
+    <script src="assets/js/functions.js"></script>
+	
+    <!-- Must be called before we load assets/js/initialise-functions.js otherwise this code (copied and adpated from that same file)   
+	     will be ignored in favor of that the code in that initialise-functions.js file. 
+		 Will allow text to appear next to the galleries instead of alwyas underneath. 
+	-->
+    <script type="text/javascript">
+	   	$(document).ready(function() {
+		
+			//copied and adapted from assets\js\initialise-functions.js
+			// ------ On Opening Popups ------
+			$('#common-modal').on('shown.bs.modal', function()
+			{
+				$("#common-modal #unique-id-for-alt-image-slider-HenningMankell, #common-modal #unique-id-for-alt-image-slider-AmosOz, #common-modal #unique-id-for-alt-image-slider-Garden").owlCarousel({
+					autoPlay : false,
+					items : 2,
+					stopOnHover : true,
+					navigation: true,
+					paginationSpeed : 500,
+					goToFirstSpeed : 2000,
+					singleItem : false,
+					lazyLoad : true,
+					baseClass : 'hide-bullets',
+					autoHeight : false,
+					transitionStyle: "backSlide",
+					afterLazyLoad : function() {
+						position_modal_at_centre(); // position popup at the centre of the page 
+						modal_backdrop_height($('#common-modal')); // fix backdrop height after all elements inside the popup are loaded
+					}
+				}); 
+			});
+
+		});
+	</script>
+	
+    <script src="assets/js/initialise-functions.js"></script>
+	
+    <script src='fullcalendar/lib/moment.min.js'></script>
+	<script src='fullcalendar/fullcalendar.js'></script>
+	<script src='fullcalendar/lang/nl.js'></script>
+	<script type="text/javascript">
+			window.changeLanguage = function(lang){
+				$(':root').attr('lang', lang);
+			};
+	</script>
+	
+    <!-- IE9 form fields placeholder fix -->
+    <!--[if lt IE 9]>
+    <script>contact_form_IE9_placeholder_fix();</script>
+    <![endif]-->  
+
+  </body>
+</html>
